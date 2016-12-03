@@ -11,11 +11,17 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var mainWindow: UIWindow = UIWindow()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let dashboardViewController = DashboardViewController()
+        
+        let navigationController = UINavigationController(rootViewController: dashboardViewController)
+        
+        mainWindow.rootViewController = navigationController
+        mainWindow.makeKeyAndVisible()
         return true
     }
 
