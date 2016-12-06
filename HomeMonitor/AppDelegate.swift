@@ -15,8 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // Setup navigation bar appearance proxy
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: Colors.trueWhite]
+        UINavigationBar.appearance().barTintColor = Colors.darkGray
+        UINavigationBar.appearance().isTranslucent = false
+        
 
-        let dashboardViewController = DashboardViewController()
+        let dashboardViewController = DashboardCollectionViewController()
         
         let navigationController = UINavigationController(rootViewController: dashboardViewController)
         

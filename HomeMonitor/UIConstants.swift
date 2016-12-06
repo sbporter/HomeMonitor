@@ -15,8 +15,18 @@ struct Colors {
     static let mediumGray = UIColor(red: 32.0/255.0, green: 34.0/255.0, blue: 45.0/255.0, alpha: 1.0)
     static let lightGray = UIColor(red: 84.0/255.0, green: 86.0/255.0, blue: 98.0/255.0, alpha: 1.0)
 
-    static let aqua = UIColor(red: 31.0/255.0, green: 150.0/255.0, blue: 168.0/255.0, alpha: 1.0)
+//    static let aqua = UIColor(red: 31.0/255.0, green: 150.0/255.0, blue: 168.0/255.0, alpha: 1.0)
     static let magenta = UIColor(red: 228.0/255.0, green: 31.0/255.0, blue: 110.0/255.0, alpha: 1.0)
+    
+    static let orange = UIColor(red: 252.0/255.0, green: 97.0/255.0, blue: 32.0/255.0, alpha: 1.0)
+    
+    static let blue = UIColor(red: 14.0/255.0, green: 68.0/255.0, blue: 232.0/255.0, alpha: 1.0)
+    
+    static let green = UIColor(red: 44.0/255.0, green: 250.0/255.0, blue: 47.0/255.0, alpha: 1.0)
+}
+
+struct Fonts {
+    static let mediumLight = UIFont(name: "HelveticaNeue-Light", size: 24.0) ?? UIFont.systemFont(ofSize: 24.0)
 }
 
 extension UIColor {
