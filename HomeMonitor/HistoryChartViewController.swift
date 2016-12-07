@@ -71,6 +71,28 @@ extension HistoryChartViewController {
         chartDataSet.circleHoleColor = UIColor.clear
         
         chartView.data = chartData
+
+        
+        // Zoom Code.  Doesn't seem to work properly.  //TODO: Debug later
+        
+//        let totalPoints: Double = Double(timestamps.count)
+//        let initialPoints: Int = 15
+//        
+//        let xMax: Double = timestamps.last ?? Double(Int.max)
+//        let xMin: Double = timestamps.first ?? 0
+//        let xFullRange: Double = xMax - xMin
+//        
+//        var xScaledRange: Double = 1
+//        if timestamps.count >= initialPoints {
+//            xScaledRange = xMax - timestamps[timestamps.count - initialPoints]
+//        }
+//        let xScale: Double = xScaledRange / xFullRange
+//        
+//        let initialLeftPoint: Double = totalPoints - Double(initialPoints)
+//        
+//        chartView.zoom(scaleX: CGFloat(xScale), scaleY: 1.0, x: 0.0, y: 0.0)
+//        chartView.moveViewToX(initialLeftPoint)
+        
         
         chartView.setNeedsDisplay()
     }
@@ -96,6 +118,7 @@ extension HistoryChartViewController: ConstraintProtocol {
         chartView.rightAxis.enabled = false
         
         chartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        
         chartView.xAxis.valueFormatter = DateValueFormatter()
         
         chartView.leftAxis.labelPosition = YAxis.LabelPosition.outsideChart

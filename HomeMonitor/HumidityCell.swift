@@ -1,21 +1,21 @@
 //
-//  TemperatureLiveButton.swift
+//  HumidityCell.swift
 //  HomeMonitor
 //
-//  Created by Seth Porter on 12/5/16.
+//  Created by Seth Porter on 12/6/16.
 //  Copyright © 2016 sbporter. All rights reserved.
 //
 
 import UIKit
 
-class TemperatureCell: UICollectionViewCell {
+class HumidityCell: UICollectionViewCell {
     var gaugeView = GaugeView()
     var lastUpdatedLabel = UILabel()
     var valueLabel = UILabel()
     
     var value: Float = 60.0 {
         didSet {
-            valueLabel.text = String(format: "%.1f°", value)
+            valueLabel.text = String(format: "%.0f%%", value)
             gaugeView.percentage = value
         }
     }
@@ -52,11 +52,12 @@ class TemperatureCell: UICollectionViewCell {
     }
 }
 
-extension TemperatureCell: ConstraintProtocol {
+extension HumidityCell: ConstraintProtocol {
     func configureSubviews() {
         gaugeView.translatesAutoresizingMaskIntoConstraints = false
         gaugeView.isUserInteractionEnabled = false
         gaugeView.backgroundColor = UIColor.clear
+        gaugeView.progressFillColor = Colors.blue
         addSubview(gaugeView)
         
         valueLabel.font = Fonts.mediumLight

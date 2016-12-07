@@ -12,6 +12,8 @@ import PureLayout
 
 class DashboardCollectionViewController: UIViewController {
     fileprivate static let temperatureReuseIdentifier: String = String(describing: TemperatureCell.self)
+    fileprivate static let humidityReuseIdentifier: String =  String(describing: HumidityCell.self)
+    
     fileprivate static let margin: CGFloat = 20
     fileprivate static let insets: UIEdgeInsets = UIEdgeInsetsMake(margin, margin, margin, margin)
     
@@ -41,6 +43,7 @@ class DashboardCollectionViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(TemperatureCell.self, forCellWithReuseIdentifier: DashboardCollectionViewController.temperatureReuseIdentifier)
+        collectionView.register(HumidityCell.self, forCellWithReuseIdentifier: DashboardCollectionViewController.humidityReuseIdentifier)
         collectionView.backgroundColor = Colors.mediumGray
         
 //        setupViews()
@@ -53,21 +56,39 @@ class DashboardCollectionViewController: UIViewController {
 
 extension DashboardCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: DashboardCollectionViewController.temperatureReuseIdentifier, for: indexPath)
-        
-        if let temperatureCell: TemperatureCell = cell as? TemperatureCell {
-            temperatureCell.layer.masksToBounds = true
-            temperatureCell.layer.cornerRadius = 10
-            temperatureCell.layer.borderWidth = 1
+        if indexPath.row % 2 == 0{
+            let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: DashboardCollectionViewController.temperatureReuseIdentifier, for: indexPath)
             
-            temperatureCell.layer.borderColor = Colors.lightGray.cgColor
+            if let temperatureCell: TemperatureCell = cell as? TemperatureCell {
+                temperatureCell.layer.masksToBounds = true
+                temperatureCell.layer.cornerRadius = 10
+                temperatureCell.layer.borderWidth = 1
+                temperatureCell.value = 71.8
+                temperatureCell.lastUpdateString = "15 minutes ago"
+                
+                temperatureCell.layer.borderColor = Colors.lightGray.cgColor
+            }
+            
+            return cell
+        } else {
+            let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: DashboardCollectionViewController.humidityReuseIdentifier, for: indexPath)
+            
+            if let humidityCell: HumidityCell = cell as? HumidityCell {
+                humidityCell.layer.masksToBounds = true
+                humidityCell.layer.cornerRadius = 10
+                humidityCell.layer.borderWidth = 1
+                humidityCell.value = 37
+                humidityCell.lastUpdateString = "15 minutes ago"
+                
+                humidityCell.layer.borderColor = Colors.lightGray.cgColor
+            }
+            
+            return cell
         }
-        
-        return cell
     }
 }
 

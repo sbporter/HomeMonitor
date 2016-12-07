@@ -11,7 +11,11 @@ import UIKit
 class GaugeView: UIView {
     let π: CGFloat = CGFloat(M_PI)
     
-    var progressFillColor = Colors.orange
+    var progressFillColor = Colors.orange {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     var percentage: Float = 0.0 {
         didSet {

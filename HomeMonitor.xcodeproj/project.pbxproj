@@ -12,6 +12,7 @@
 		5D29B82F1DF67C4000F839EA /* HistoryChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29B82E1DF67C4000F839EA /* HistoryChartViewController.swift */; };
 		5D29B8311DF6809E00F839EA /* TemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29B8301DF6809E00F839EA /* TemperatureCell.swift */; };
 		5D29B8331DF68C7F00F839EA /* GaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D29B8321DF68C7F00F839EA /* GaugeView.swift */; };
+		5D33F1471DF7E544003A2595 /* HumidityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D33F1461DF7E544003A2595 /* HumidityCell.swift */; };
 		5D5BA5441DF36CA9008ABB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BA5431DF36CA9008ABB78 /* AppDelegate.swift */; };
 		5D5BA5461DF36CA9008ABB78 /* DashboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BA5451DF36CA9008ABB78 /* DashboardCollectionViewController.swift */; };
 		5D5BA54B1DF36CA9008ABB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BA54A1DF36CA9008ABB78 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		5D29B82E1DF67C4000F839EA /* HistoryChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryChartViewController.swift; sourceTree = "<group>"; };
 		5D29B8301DF6809E00F839EA /* TemperatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureCell.swift; sourceTree = "<group>"; };
 		5D29B8321DF68C7F00F839EA /* GaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeView.swift; sourceTree = "<group>"; };
+		5D33F1461DF7E544003A2595 /* HumidityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumidityCell.swift; sourceTree = "<group>"; };
 		5D5BA5401DF36CA9008ABB78 /* HomeMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5BA5431DF36CA9008ABB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5BA5451DF36CA9008ABB78 /* DashboardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				5D5BA5451DF36CA9008ABB78 /* DashboardCollectionViewController.swift */,
 				5D29B8301DF6809E00F839EA /* TemperatureCell.swift */,
+				5D33F1461DF7E544003A2595 /* HumidityCell.swift */,
 				5D29B8321DF68C7F00F839EA /* GaugeView.swift */,
 				5D29B82E1DF67C4000F839EA /* HistoryChartViewController.swift */,
 			);
@@ -274,6 +277,7 @@
 				5D29B8311DF6809E00F839EA /* TemperatureCell.swift in Sources */,
 				5D29B8331DF68C7F00F839EA /* GaugeView.swift in Sources */,
 				5D5BA55E1DF39507008ABB78 /* MulticastDelegate.swift in Sources */,
+				5D33F1471DF7E544003A2595 /* HumidityCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

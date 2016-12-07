@@ -26,7 +26,9 @@ struct Colors {
 }
 
 struct Fonts {
-    static let mediumLight = UIFont(name: "HelveticaNeue-Light", size: 24.0) ?? UIFont.systemFont(ofSize: 24.0)
+    static let small = UIFont(name: "HelveticaNeue", size: 12.0) ?? UIFont.systemFont(ofSize: 12.0)
+    static let mediumLight = UIFont(name: "HelveticaNeue-Light", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0)
+    static let largeLight = UIFont(name: "HelveticaNeue-Light", size: 100.0) ?? UIFont.systemFont(ofSize: 100.0)
 }
 
 extension UIColor {
